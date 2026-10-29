@@ -12,10 +12,10 @@ total = 0
 
 #added : at the end of scores and an s in total + scores
 for score in scores:
-    total = total + scores
+    total = total + score
 
 #added a plus sign next to avarage becuse for print to show the score, it needs the average. 
-average = total / len(scores)
+average = "total / len(scores)"
 print("Your average score is:" + average)
 
 highest = 0
