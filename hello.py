@@ -1,15 +1,25 @@
 # print("Hello My name is Janer, I'm using Python in vscode!")
-card_Valid = True
-pin_Correct = True
 
-card_Valid = float(input("Enter your card name: "))
-pin_Correct= float(input("Enter your PIN (4 digits)"))
+NAME = "Janer"
+PIN = "1234"
 
-if card_Valid == True and pin_Correct == True:
-    print("Access Granted")
+entered_name = input("Enter your card name: ")
+entered_pin = input("Enter your PIN (4 digits): ")
 
-    if card_Valid == False and pin_Correct == False:
-       print("Invalid Access")
-       
-else: 
-   print("Invalid Access")
+card_Valid = (entered_name == NAME)
+pin_Correct = (entered_pin == PIN)
+
+if card_Valid == NAME and pin_Correct == PIN:
+    print("Access card accepted and Access granted")
+
+else:
+   if card_Valid != NAME and pin_Correct != PIN:
+      print("Invalid access and Incorrect pin")
+
+   else:
+      if card_Valid == NAME and pin_Correct != PIN:
+         print("Access card accepted but Incorrect pin")
+
+      else: 
+         if card_Valid != NAME and pin_Correct == PIN:
+            print("Invalid access but correct-pin")
