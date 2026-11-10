@@ -1,36 +1,33 @@
 import random
 
-player = input ("rock (r), paper (p), scissors (s)")
-computer = random.randint (1,3)
+player = input("Rock (r), Paper (p), Scissors (s): ")
+computer = random.choice(["r", "p", "s"])
 
-#Player Wins
+# Player Wins
 if player == "r" and computer == "s":
-    print ("Rock vs Scissors, Player Wins")
+    print("Rock vs Scissors, Player Wins")
 
 elif player == "p" and computer == "r":
-    print ("Paper vs Rock, Player Wins")
+    print("Paper vs Rock, Player Wins")
 
 elif player == "s" and computer == "p":
-    print ("Scissors vs Rock, Player Wins")
+    print("Scissors vs Paper, Player Wins")
 
-#Player Loses
+# Player Loses
 elif player == "s" and computer == "r":
-    print ("Scissors vs Rock, Computer Wins")
+    print("Scissors vs Rock, Computer Wins")
 
 elif player == "r" and computer == "p":
-    print (" Rock vs Paper, Computer Wins")
+    print("Rock vs Paper, Computer Wins")
 
 elif player == "p" and computer == "s":
-    print ("Rock vs Scissors , Computer Wins")
+    print("Paper vs Scissors, Computer Wins")
 
-#Draw
-elif player == "r" and computer == "r":
-    print ("Rock vs Rock, Draw")
+# Draw
+elif player == computer:
+    print("It's a Draw!")
 
-elif player == "p" and computer == "p":
-    print ("Paper vs Paper, Draw")
+else:
+    print("Wrong input!")
 
-elif player == "s" and computer == "s":
-    print ("Scissors vs Scissors, Draw")
-
-else: print ("wrong imput")
+print("Computer chose:", computer)
