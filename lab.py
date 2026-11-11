@@ -6,7 +6,8 @@ print("Welcome to the Debugging Lab!")
 name = input("Enter your name:")
 print("Hello " + name + "!" + " Let's calculate your test scores.")
 
-scores = [85, 90, 78, "88", 92]
+#removed the colums in 88
+scores = [85, 90, 78, 88, 92]
 
 total = 0
 
@@ -14,13 +15,16 @@ total = 0
 for score in scores:
     total = total + score
 
-#added a plus sign next to avarage becuse for print to show the score, it needs the average. 
-average = "total / len(scores)"
-print("Your average score is:" + average)
+#added a comma next to average because for print to show the score, it needs the average. 
+average = total / len(scores)
+
+#added a comma before average
+print("Your average score is:", average)
 
 highest = 0
 for s in scores:
     if s > highest:
         highest = s
+#added a comma before highest aswell
+print("Your highest score was:", highest)
 
-print("Your highest score was:" + highest)
